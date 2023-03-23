@@ -12,7 +12,7 @@ class TestOrder:
         make_request = submit_order(1003, 'John')
         assert make_request.status_code == 400
 
-    def test_submit_oder_invalid_error_msg(self):
+    def test_submit_order_invalid_error_msg(self):
         make_request = submit_order(1003, 'John')
         assert make_request.json()['error'] == 'Invalid or missing bookId.'
 
